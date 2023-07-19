@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyChatGpt</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/images/favicon (1).ico" />
+    <script defer src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+</head>
+<body>
+    <div class="app light">
+        <aside>
+            <nav>
+                <div class="nav-top">
+                    <button id="add-chat">
+                        <iconify-icon icon="bi:plus-lg"></iconify-icon>New Chat
+                    </button>
+                    <ul class="chats">
+                        <li>
+                        <div>
+                            <iconify-icon icon="bi:chat-left" class="icon"></iconify-icon>
+                            <span class="chat-title" contenteditable>New Chat</span>
+                        </div>
+                        <div>
+                            <iconify-icon icon="bi:trash3" class="icon" onclick="removechat(this)"></iconify-icon>
+                            <iconify-icon icon="bi:pen" class="icon" onclick="updateChatTitle(this)"></iconify-icon>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <iconify-icon icon="bi:chat-left" class="icon"></iconify-icon>
+                            <span class="chat-title" contenteditable>New Chat</span>
+                        </div>
+                        <div>
+                            <iconify-icon icon="bi:trash3" class="icon" onclick="removeChat(this)"></iconify-icon>
+                            <iconify-icon icon="bi:pen" class="icon" onclick="updateChatTitle(this)"></iconify-icon>
+                        </div>
+                    </li>
+                    </ul>
+                </div>
+                <ul>
+                    <li id="delete">
+                    <iconify-icon icon="bi:trash3" class="icon"></iconify-icon> clear conversation
+                    </li>
+                    <li>
+                        <iconify-icon icon="bi:gear" class="icon"></iconify-icon> settings
+                    </li>
+                    <li id="mode">
+                        <iconify-icon icon="bi:brightness-high" class="icon"></iconify-icon> light mode
+                    </li>
+                    <li>
+                        <iconify-icon icon="bi:globe-americas" class="icon"></iconify-icon> english
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+
+        <main>
+            <div class="hints">
+                <img src="images/1681038242chatgpt-logo-png.png" alt="" class="logo">
+                <p>Enter your message to start a chat. This could be a question, a statement, or any other text</p>
+            </div>
+            <div class="qna">
+                <!-- <div class="result">
+                    <div class="question">
+                        <iconify-icon icon="bi:person-gear" class="icon blue"></iconify-icon>
+                        <h3>what is web development</h3>
+                    </div>
+                    <div class="answer">
+                        <iconify-icon icon="bi:robot" class="icon green"></iconify-icon>
+                        <p>it's all about developing website using defferent web technologies</p>
+
+                    </div>
+
+                </div> -->
+            </div>
+            <div class="request">
+                    <iconify-icon icon="bi:person-gear" class="icon"></iconify-icon>
+                    <input type="text" placeholder="Provide a prompt ..." autofocus>
+                    <button id="send">Send</button>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
